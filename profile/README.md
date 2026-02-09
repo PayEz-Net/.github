@@ -76,18 +76,17 @@ curl -X POST http://localhost:5173/v1/query \
   -d '{"sql": "SELECT * FROM users WHERE age > 25"}'
 ```
 
-**Vibe SDK — ORM Without the Configuration**
+**Vibe SDK — The ORM That Disappears**
 
-The missing piece: fully-typed data access with zero ORM setup. Connect your Next.js app to your VibeSQL schema and get:
+The entire ORM layer, automated and invisible. Change your VibeSQL schema, save the file — your TypeScript types update automatically. No build step, no commands, no configuration. **It just works.**
 
-- **Auto-generated TypeScript types** — Your schema becomes typed classes automatically
-- **Build-time type generation** — Schema changes sync to your codebase
-- **Pre-built CRUD operations** — Insert, update, delete, query with full type safety
-- **React hooks included** — `useVibeCollection()` for client components
-- **Server components ready** — `createVibeClient()` for async server-side queries
-- **Zero ORM config** — No Prisma schema, no TypeORM decorators, no migration scripts
+- **Live hot-reload** — Polls for schema changes every 10 seconds, regenerates types automatically
+- **Zero configuration** — No Prisma schema, no TypeORM decorators, no migration scripts
+- **Full type safety** — Your VibeSQL schema becomes typed TypeScript classes
+- **Pre-built everything** — CRUD operations, React hooks, server components
+- **Invisible infrastructure** — So reliable you forget it's running
 
-**The entire ORM layer is automated.** Define your schema in VibeSQL, run the Next.js plugin, and your typed data layer is ready. Schema changes? The plugin regenerates types on next build.
+**The entire ORM layer is automated.** Connect your Next.js app to VibeSQL and your types just... exist. Update your schema? Types update. Add a collection? New types appear. It's one of those things that just always works, so you never think about it.
 
 ```typescript
 // No ORM config needed. Just use it.
