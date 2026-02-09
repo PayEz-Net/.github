@@ -54,7 +54,7 @@ Full-featured PostgreSQL 16 that runs anywhere. **Currently powering 3 productio
 |---------|-------------|--------|
 | [vibesql-micro](https://github.com/PayEz-Net/vibesql-micro) | Single-binary embedded PostgreSQL 16 with HTTP API | ✅ Production |
 | [vibesql-server](https://github.com/PayEz-Net/vibesql-server) | Multi-tenant server with schema evolution (.NET 9) | ✅ Production |
-| [vibe-sdk](https://github.com/PayEz-Net/vibe-sdk) | TypeScript SDK with Next.js integration & React hooks | ✅ Stable |
+| [vibe-sdk](https://github.com/PayEz-Net/vibe-sdk) | Automatic ORM - typed classes generated from your schema, zero config | ✅ Stable |
 
 **Why VibeSQL?**
 - **Full-fledged relational database** — Complete PostgreSQL 16, not a subset
@@ -74,6 +74,30 @@ Full-featured PostgreSQL 16 that runs anywhere. **Currently powering 3 productio
 curl -X POST http://localhost:5173/v1/query \
   -H "Content-Type: application/json" \
   -d '{"sql": "SELECT * FROM users WHERE age > 25"}'
+```
+
+**Vibe SDK — ORM Without the Configuration**
+
+The missing piece: fully-typed data access with zero ORM setup. Connect your Next.js app to your VibeSQL schema and get:
+
+- **Auto-generated TypeScript types** — Your schema becomes typed classes automatically
+- **Build-time type generation** — Schema changes sync to your codebase
+- **Pre-built CRUD operations** — Insert, update, delete, query with full type safety
+- **React hooks included** — `useVibeCollection()` for client components
+- **Server components ready** — `createVibeClient()` for async server-side queries
+- **Zero ORM config** — No Prisma schema, no TypeORM decorators, no migration scripts
+
+**The entire ORM layer is automated.** Define your schema in VibeSQL, run the Next.js plugin, and your typed data layer is ready. Schema changes? The plugin regenerates types on next build.
+
+```typescript
+// No ORM config needed. Just use it.
+import { useVibeCollection } from '@vibe/client/react';
+
+export function ProductList() {
+  const { data, isLoading } = useVibeCollection('products');
+  // 'data' is fully typed from your VibeSQL schema
+  return <div>{data?.map(p => <div key={p.id}>{p.name}</div>)}</div>;
+}
 ```
 
 ### Authentication & Identity SDKs
