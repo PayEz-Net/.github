@@ -46,9 +46,9 @@ PayEz is an enterprise platform providing identity, data, and compliance infrast
 
 We're open-sourcing key components of our platform to accelerate development for the broader community.
 
-### VibeSQL — PostgreSQL for AI Agents & Edge Computing
+### VibeSQL — Production PostgreSQL, Zero Config
 
-Zero-config PostgreSQL that runs anywhere. Embedded in your binary or deployed as a multi-tenant server.
+Full-featured PostgreSQL 16 that runs anywhere. **Currently powering 3 production sites** including idealresume.online, idealvibe.online, and internal infrastructure. Embedded in your binary or deployed as a multi-tenant server.
 
 | Project | Description | Status |
 |---------|-------------|--------|
@@ -57,11 +57,13 @@ Zero-config PostgreSQL that runs anywhere. Embedded in your binary or deployed a
 | [vibe-sdk](https://github.com/PayEz-Net/vibe-sdk) | TypeScript SDK with Next.js integration & React hooks | ✅ Stable |
 
 **Why VibeSQL?**
+- **Full-fledged relational database** — Complete PostgreSQL 16, not a subset
+- **Production-proven** — Running live sites with real users and revenue
 - **Zero dependencies** — No PostgreSQL installation required
 - **HTTP-native** — REST API for SQL, no database drivers needed
-- **AI-agent friendly** — Designed for autonomous installation and operation
 - **Schema evolution** — Lazy migration on read with declarative transforms
 - **Multi-tenant ready** — Isolated data per client with tier-based limits
+- **AI-agent friendly** — Autonomous installation and operation
 - **Cross-platform** — Windows, macOS, Linux (amd64/arm64)
 
 ```bash
