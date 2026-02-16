@@ -56,7 +56,7 @@ Full-featured PostgreSQL 16 that runs anywhere. **Currently powering 3 productio
 | [vibesql-server](https://github.com/PayEz-Net/vibesql-server) | Multi-tenant server with schema evolution (.NET 9) | ✅ Production |
 | [vibesql-edge](https://github.com/PayEz-Net/vibesql-edge) | Auth gateway — bring your own IDP to VibeSQL (.NET 9) | ✅ Production |
 | [vibesql-audit](https://github.com/PayEz-Net/vibesql-audit) | PCI DSS audit logging — PostgreSQL C extension + Rust forwarder | ✅ Production |
-| [vibesql-vault](https://github.com/PayEz-Net/vibesql-vault) | Field-level JSONB encryption with governed key lifecycle (Rust) | 🚀 Development |
+| [vibesql-vault](https://github.com/PayEz-Net/vibesql-vault) | Governed storage for encrypted data — access policies, retention, purge proof (Rust) | 🚀 Development |
 | [vibe-sdk](https://github.com/PayEz-Net/vibe-sdk) | Automatic ORM - typed classes generated from your schema, zero config | ✅ Stable |
 
 **Why VibeSQL?**
