@@ -55,6 +55,7 @@ Full-featured PostgreSQL 16 that runs anywhere. **Currently powering 3 productio
 | [vibesql-micro](https://github.com/PayEz-Net/vibesql-micro) | Single-binary embedded PostgreSQL 16 with HTTP API | ✅ Production |
 | [vibesql-server](https://github.com/PayEz-Net/vibesql-server) | Multi-tenant server with schema evolution (.NET 9) | ✅ Production |
 | [vibesql-edge](https://github.com/PayEz-Net/vibesql-edge) | Auth gateway — bring your own IDP to VibeSQL (.NET 9) | ✅ Production |
+| [vibesql-audit](https://github.com/PayEz-Net/vibesql-audit) | PCI DSS audit logging — PostgreSQL C extension + Rust forwarder | ✅ Production |
 | [vibe-sdk](https://github.com/PayEz-Net/vibe-sdk) | Automatic ORM - typed classes generated from your schema, zero config | ✅ Stable |
 
 **Why VibeSQL?**
