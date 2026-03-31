@@ -1,6 +1,6 @@
 # PayEz Technologies
 
-**Open source auth, database, and payment infrastructure** — extracted from a PCI-compliant payment platform. Drop in what you need. Leave what you don't.
+**Open source auth, database, payment infrastructure, and AI agent orchestration** — extracted from a PCI-compliant payment platform. Drop in what you need. Leave what you don't.
 
 ---
 
@@ -56,6 +56,33 @@ curl -X POST http://localhost:5173/v1/query \
 ```
 
 **Docs:** [vibesql.online](https://vibesql.online/docs.html)
+
+---
+
+## 🤖 ACP — Agent Collaboration Platform
+
+Desktop shell + backend API for orchestrating AI agent teams. Each terminal pane runs a Claude Code session with an assigned agent identity. Agents collaborate through async mail, shared kanban boards, and real-time chat — coordinated by a cocktail party algorithm that matches the right agent to the right task.
+
+| Component | Stack | What It Does |
+|-----------|-------|-------------|
+| [packages/desktop](https://github.com/PayEz-Net/acp/tree/main/packages/desktop) | Electron 28, React 18, TypeScript, Vite | Terminal grid, mail client, kanban, document viewer, autonomy controls |
+| [packages/api](https://github.com/PayEz-Net/acp/tree/main/packages/api) | Node.js, Express, TypeScript | Agent lifecycle, collaboration engine, task management, SSE streaming |
+
+**Key capabilities:**
+- Terminal grid with per-pane agent identity injection (Claude Code + node-pty)
+- Async agent mail — context preservation across sessions
+- Unattended autonomy mode with emergency stop and escalation
+- Kanban task board with agent assignment and claim hints
+- Real-time events via SignalR + Server-Sent Events
+- VibeSQL-backed storage — all agent data in PostgreSQL over HTTP
+
+```bash
+git clone https://github.com/PayEz-Net/acp.git
+cd acp && cp .env.example .env
+# Edit .env → npm install → npm start
+```
+
+**Repo:** [PayEz-Net/acp](https://github.com/PayEz-Net/acp) · MIT licensed
 
 ---
 
